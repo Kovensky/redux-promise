@@ -8,18 +8,15 @@ export default function promiseMiddleware({ dispatch }) {
   return next => action => {
     if (!isFSA(action)) {
       return isPromise(action)
-        ? action.then(dispatch)
+        ? (action.then(dispatch), action)
         : next(action);
     }
 
     return isPromise(action.payload)
-      ? action.payload.then(
+      ? (action.payload.then(
           result => dispatch({ ...action, payload: result }),
-          error => {
-            dispatch({ ...action, payload: error, error: true });
-            return Promise.reject(error);
-          }
-        )
+          error => dispatch({ ...action, payload: error, error: true })
+        ), action.payload)
       : next(action);
   };
 }

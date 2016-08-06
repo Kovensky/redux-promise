@@ -23,7 +23,7 @@ If it receives an Flux Standard Action whose `payload` is a promise, it will eit
 - dispatch a copy of the action with the resolved value of the promise, and set `status` to `success`.
 - dispatch a copy of the action with the rejected value of the promise, and set `status` to `error`.
 
-The middleware returns a promise to the caller so that it can wait for the operation to finish before continuing. This is especially useful for server-side rendering. If you find that a promise is not being returned, ensure that all middleware before it in the chain is also returning its `next()` call to the caller.
+The middleware returns the original promise to the caller so that it can wait for the operation to finish before continuing. This is especially useful for server-side rendering. If you find that a promise is not being returned, ensure that all middleware before it in the chain is also returning its `next()` call to the caller.
 
 ## Using in combination with redux-actions
 
