@@ -1,8 +1,8 @@
 redux-promise
 =============
 
-[![build status](https://img.shields.io/travis/acdlite/redux-promise/master.svg?style=flat-square)](https://travis-ci.org/acdlite/redux-promise)
-[![npm version](https://img.shields.io/npm/v/redux-promise.svg?style=flat-square)](https://www.npmjs.com/package/redux-promise)
+[![build status](https://img.shields.io/travis/Kovensky/redux-promise/master.svg?style=flat-square)](https://travis-ci.org/Kovensky/redux-promise)
+[![npm version](https://img.shields.io/npm/v/@kovensky/redux-promise.svg?style=flat-square)](https://www.npmjs.com/package/@kovensky/redux-promise)
 
 [FSA](https://github.com/acdlite/flux-standard-action)-compliant promise [middleware](https://github.com/gaearon/redux/blob/master/docs/middleware.md) for Redux.
 
